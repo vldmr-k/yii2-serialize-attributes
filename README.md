@@ -1,1 +1,1 @@
-# yii2-serialize-behavior
+# yii2-serialize-attributes
