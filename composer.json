@@ -1,0 +1,28 @@
+{
+  "name": "wowkaster/yii2-serialize-attributes",
+  "description": "This behavior allows you to treat model attributes as arrays, and they are automatically serialized for insertion and unserialized upon select, as long as you use the active record find methods.",
+  "keywords": ["yii2", "serialize"],
+  "type": "yii2-extension",
+  "homepage": "https://github.com/wowkaster/yii2-serialize-attributes",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladikir Konchakovsky",
+      "email": "wowkaster@gmail.com",
+      "role": "Creator"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/wowkaster/yii2-serialize-attributes/issues",
+    "source": "https://github.com/wowkaster/yii2-serialize-attributes"
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "yiisoft/yii2": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "wowkaster\\serializeAttributes\\": ""
+    }
+  }
+}
