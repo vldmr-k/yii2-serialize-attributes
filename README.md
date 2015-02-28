@@ -7,7 +7,7 @@ require : {
 }
 ```
 
-Hot to use.
+How to use.
 ```
 class SomeModel extends \yii\db\ActiveRecord {
   public functuin rules() {
