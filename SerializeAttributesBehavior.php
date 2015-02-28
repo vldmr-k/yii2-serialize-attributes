@@ -11,7 +11,7 @@ use yii\db\BaseActiveRecord;
 use yii\helpers\Json;
 
 
-class convertAttrBehavior extends AttributeBehavior{
+class SerializeAttributesBehavior extends AttributeBehavior{
 
     const DEFAULT_CONVERT_TYPE = 'serialize';
 
