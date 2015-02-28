@@ -16,7 +16,6 @@
     "issues": "https://github.com/wowkaster/yii2-serialize-attributes/issues",
     "source": "https://github.com/wowkaster/yii2-serialize-attributes"
   },
-  "minimum-stability": "dev",
   "require": {
     "yiisoft/yii2": "*"
   },
