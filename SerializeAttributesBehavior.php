@@ -4,7 +4,7 @@
  * @author Vladimir Konchakovsky <wowkaster@gmail.com>
  */
 
-namespace wowkaster\convertAttr;
+namespace wowkaster\serializeAttributes;
 
 use yii\behaviors\AttributeBehavior;
 use yii\db\BaseActiveRecord;
