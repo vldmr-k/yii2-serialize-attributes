@@ -40,6 +40,9 @@ class SerializeAttributesBehavior extends AttributeBehavior{
                 $this->attributes[BaseActiveRecord::EVENT_BEFORE_INSERT][] = $attrName;
                 $this->attributes[BaseActiveRecord::EVENT_BEFORE_UPDATE][] = $attrName;
                 $this->attributes[BaseActiveRecord::EVENT_AFTER_FIND][] = $attrName;
+                $this->attributes[BaseActiveRecord::EVENT_AFTER_INSERT][] = $attrName;
+                $this->attributes[BaseActiveRecord::EVENT_AFTER_UPDATE][] = $attrName;
+
 
             }
         }
@@ -57,9 +60,9 @@ class SerializeAttributesBehavior extends AttributeBehavior{
             $convertType = is_scalar($key) ? $value : self::DEFAULT_CONVERT_TYPE;
             $data = $this->owner->getAttribute($attrName);
 
-            if($event->name == BaseActiveRecord::EVENT_BEFORE_INSERT || $event->name == BaseActiveRecord::EVENT_BEFORE_UPDATE) {
+            if(in_array($event->name, [BaseActiveRecord::EVENT_BEFORE_INSERT, BaseActiveRecord::EVENT_BEFORE_UPDATE])) {
                 return $this->getConvertValue($data, $convertType);
-            } elseif($event->name == BaseActiveRecord::EVENT_AFTER_FIND) {
+            } elseif(in_array($event->name, [BaseActiveRecord::EVENT_AFTER_FIND, BaseActiveRecord::EVENT_AFTER_INSERT, BaseActiveRecord::EVENT_AFTER_UPDATE])) {
                 return $this->getUnConvertValue($data, $convertType);
             } else {
                 return $data;
