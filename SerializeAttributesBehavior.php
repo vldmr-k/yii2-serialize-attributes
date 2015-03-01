@@ -61,7 +61,7 @@ class SerializeAttributesBehavior extends AttributeBehavior{
             $data = $this->owner->getAttribute($attrName);
 
             if(in_array($event->name, [BaseActiveRecord::EVENT_BEFORE_INSERT, BaseActiveRecord::EVENT_BEFORE_UPDATE])) {
-                return $this->getConvertValue($data, $convertType);
+                return $this->getConvertValue((array)$data, $convertType);
             } elseif(in_array($event->name, [BaseActiveRecord::EVENT_AFTER_FIND, BaseActiveRecord::EVENT_AFTER_INSERT, BaseActiveRecord::EVENT_AFTER_UPDATE])) {
                 return $this->getUnConvertValue($data, $convertType);
             } else {
